@@ -10,16 +10,16 @@ namespace InterfaceExercise
     {
         public void Drive()
         {
-            Console.WriteLine("The car speeds down the highway");
+            Console.WriteLine($"The {GetType().Name} speeds down the highway");
         }
 
         public void Honk()
         { 
-            Console.WriteLine("The car Hooooonks!");
+            Console.WriteLine($"The {GetType().Name} Hooooonks!");
         }
         public void GetsGas()
         {
-            Console.WriteLine("The car gets gas.");
+            Console.WriteLine($"The {GetType().Name} gets gas.");
         }
         public double Cost { get; set; }
 
@@ -27,6 +27,11 @@ namespace InterfaceExercise
 
         public string Logo { get; set; }
 
+        public string TrunkSize { get; set; }
+
+        public int NumberOfDoors { get; set; } = 4;
+
+        public bool HasAWheel { get; set; } = true;
 
     }
 }
