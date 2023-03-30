@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfaceExercise
 {
-    public interface ICompany
+    public class SUV
     {
-        public string Name { get; set; }
-        public string Logo { get; set; }
     }
 }

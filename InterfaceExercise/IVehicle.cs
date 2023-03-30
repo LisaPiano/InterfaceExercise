@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace InterfaceExercise
 {
-    internal interface IVehicle
+    public interface IVehicle
     {
+        public void Drive();
+        public void Honk();
+        public void GetsGas();
+
+        public double Cost { get; set; }
     }
 }
