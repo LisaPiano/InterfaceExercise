@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace InterfaceExercise
 {
@@ -6,6 +9,36 @@ namespace InterfaceExercise
     {
         static void Main(string[] args)
         {
+            
+            Car genesis = new Car();
+            genesis.Cost = 100000;
+
+            Truck pickupTruck = new Truck();
+            pickupTruck.Cost = 200000;
+
+            SUV toyota = new SUV();
+            toyota.Cost = 300000;
+
+
+
+            var vehicles = new List<IVehicle>();
+            vehicles.Add(genesis);
+            vehicles.Add(pickupTruck);
+            vehicles.Add(toyota);
+
+
+            foreach (var vehicle in vehicles)
+            {
+                vehicle.Drive();
+                vehicle.Honk();
+                Console.WriteLine($"This vehicle costs ${vehicle.Cost}!");
+                vehicle.GetsGas();
+                Console.WriteLine("======================================");
+            }
+
+            
+            
+            
             //TODO Be sure to follow BEST PRACTICES when creating classes and interfaces
 
             //Create 2 Interfaces called IVehicle & ICompany
